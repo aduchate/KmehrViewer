@@ -1771,16 +1771,22 @@
                         </tr>
                     </xsl:if>
                 </xsl:when>
-                <xsl:otherwise>
-                    <tr style="display:none">
-                        <th>
-                            <xsl:value-of select="name()"/>
-                        </th>
-                        <td colspan="2">
-                            <xsl:value-of select="."/>
-                        </td>
-                    </tr>
-                </xsl:otherwise>
+ 					<xsl:when test="name() = 'lifecycle'">
+							<xsl:if test="not(../kmehr:cd[@S='CD-ITEM']='medication' or ../kmehr:cd[@S='CD-ITEM']='healthcareelement' )">
+								<tr style="display:none">
+									<th>LifeCycle</th>
+									<td>
+										<xsl:value-of select="kmehr:cd"/>
+									</td>
+								</tr>
+							</xsl:if>
+						</xsl:when>
+						<xsl:otherwise>
+							<tr style="display:none">
+								<th><xsl:value-of select="name()"/></th>
+								<td colspan="2">Unhandled<!--<xsl:value-of select="text()"/>--></td>
+							</tr>
+						</xsl:otherwise>
             </xsl:choose>
         </xsl:for-each>
     </xsl:template>
