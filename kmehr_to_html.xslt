@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:kmehr="http://www.ehealth.fgov.be/standards/kmehr/schema/v1"
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -1800,7 +1800,7 @@
                     <small id="resultCross">[+]</small>
                     &#160;
                     <span>
-                        <xsl:attribute name="class" select="concat('Lang',kmehr:cd[@S='CD-TRANSACTION'])"/>
+                        <xsl:attribute name="class"><xsl:value-of select="concat('Lang',kmehr:cd[@S='CD-TRANSACTION'])"/></xsl:attribute>
                     </span>
                     (
                     <xsl:choose>
@@ -2758,7 +2758,7 @@
         <div class="ItemContent">
             <h4>
                 <span>
-                    <xsl:attribute name="class" select="concat('Lang',./kmehr:cd[@S='CD-ITEM'])"/>
+                    <xsl:attribute name="class"><xsl:value-of select="concat('Lang',./kmehr:cd[@S='CD-ITEM'])"/></xsl:attribute>
                 </span>
             </h4>
             <!-- GENERIC ITEM ELEMENTS PROCESS -->
