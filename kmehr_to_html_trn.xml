@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpmigrationVisualizationTranslation>
+    <!--<translation class="" en="" fr="" nl="" de=""/>-->
+
+    <gpmigration>
+        <translation class="LangEnglish" en="English" fr="Anglais" nl="Engels" de="Englisch"/>
+        <translation class="LangDutch" en="Dutch" fr="Néerlandais" nl="Nederlands" de="Niederlande"/>
+        <translation class="LangFrench" en="French" fr="Français" nl="Frans" de="Französisch"/>
+        <translation class="LangGerman" en="German" fr="Allemand" nl="Duits" de="Deutsch"/>
+        <translation class="LangSumehrCreationDate" en="Creation date" fr="Date de création" nl="Aanmaakdatum"
+                     de="Anfertigungsdatum"/>
+        <translation class="LangShowWarnings" en="Show Warnings" fr="Montrer les avertissements"
+                     nl="De waarschuwingen tonen" de="Die Warnungen anzeigen"/>
+        <translation class="Langresult" en="Result" fr="Résultat" nl="Resultaat" de="Resultaat"/>
+        <translation class="Langlabresult" en="Lab Result" fr="Résultat de laboratoire" nl="Labo Resultaat"
+                     de="Resultaat"/>
+        <translation class="Langadmission" en="Admission" fr="Admission" nl="Admission" de="Admission"/>
+        <translation class="Langalert" en="Alert" fr="Alert" nl="Alert" de="Alert"/>
+        <translation class="Langcontactreport" en="Contactreport" fr="Contactreport" nl="Contactreport"
+                     de="Contactreport"/>
+        <translation class="Langdeath" en="Death" fr="Death" nl="Death" de="Death"/>
+        <translation class="Langdischarge" en="Discharge" fr="Discharge" nl="Discharge" de="Discharge"/>
+        <translation class="Langdischargereport" en="Dischargereport" fr="Dischargereport" nl="Dischargereport"
+                     de="Dischargereport"/>
+        <translation class="Langepidemiology" en="Epidemiology" fr="Epidemiology" nl="Epidemiology" de="Epidemiology"/>
+        <translation class="Langlabrequest" en="Labrequest" fr="Labrequest" nl="Labrequest" de="Labrequest"/>
+        <translation class="Langlabresult" en="Labresult" fr="Labresult" nl="Labresult" de="Labresult"/>
+        <translation class="Langnote" en="Note" fr="Note" nl="Note" de="Note"/>
+        <translation class="Langhospitalpharmaceuticalprescription" en="Hospitalpharmaceuticalprescription"
+                     fr="Hospitalpharmaceuticalprescription" nl="Hospitalpharmaceuticalprescription"
+                     de="Hospitalpharmaceuticalprescription"/>
+        <translation class="Langpharmaceuticalprescription" en="Pharmaceuticalprescription"
+                     fr="Pharmaceuticalprescription" nl="Pharmaceuticalprescription" de="Pharmaceuticalprescription"/>
+        <translation class="Langproductdelivery" en="Productdelivery" fr="Productdelivery" nl="Productdelivery"
+                     de="Productdelivery"/>
+        <translation class="Langquickdischargereport" en="Quickdischargereport" fr="Quickdischargereport"
+                     nl="Quickdischargereport" de="Quickdischargereport"/>
+        <translation class="Langreferral" en="Referral" fr="Referral" nl="Referral" de="Referral"/>
+        <translation class="Langrequest" en="Request" fr="Request" nl="Request" de="Request"/>
+        <translation class="Langresult" en="Result" fr="Result" nl="Result" de="Result"/>
+        <translation class="Langvaccination" en="Vaccination" fr="Vaccination" nl="Vaccination" de="Vaccination"/>
+        <translation class="Langsumehr" en="Sumehr" fr="Sumehr" nl="Sumehr" de="Sumehr"/>
+        <translation class="Langecare-safe-consultation" en="Ecare-safe-consultation" fr="Ecare-safe-consultation"
+                     nl="Ecare-safe-consultation" de="Ecare-safe-consultation"/>
+        <translation class="Langebirth-mother-notification" en="Ebirth-mother-notification"
+                     fr="Ebirth-mother-notification" nl="Ebirth-mother-notification" de="Ebirth-mother-notification"/>
+        <translation class="Langebirth-baby-notification" en="Ebirth-baby-notification" fr="Ebirth-baby-notification"
+                     nl="Ebirth-baby-notification" de="Ebirth-baby-notification"/>
+        <translation class="Langebirth-baby-medicalform" en="Ebirth-baby-medicalform" fr="Ebirth-baby-medicalform"
+                     nl="Ebirth-baby-medicalform" de="Ebirth-baby-medicalform"/>
+        <translation class="Langebirth-mother-medicalform" en="Ebirth-mother-medicalform" fr="Ebirth-mother-medicalform"
+                     nl="Ebirth-mother-medicalform" de="Ebirth-mother-medicalform"/>
+        <translation class="Langclinicalsummary" en="Clinicalsummary" fr="Clinicalsummary" nl="Clinicalsummary"
+                     de="Clinicalsummary"/>
+        <translation class="Langmedicaladvisoragreement" en="Medicaladvisoragreement" fr="Medicaladvisoragreement"
+                     nl="Medicaladvisoragreement" de="Medicaladvisoragreement"/>
+        <translation class="Langbvt-sample" en="Bvt-sample" fr="Bvt-sample" nl="Bvt-sample" de="Bvt-sample"/>
+        <translation class="Langclinicalpath" en="Clinicalpath" fr="Clinicalpath" nl="Clinicalpath" de="Clinicalpath"/>
+        <translation class="Langtelemonitoring" en="Telemonitoring" fr="Telemonitoring" nl="Telemonitoring"
+                     de="Telemonitoring"/>
+        <translation class="Langradiationexposuremonitoring" en="Radiationexposuremonitoring"
+                     fr="Radiationexposuremonitoring" nl="Radiationexposuremonitoring"
+                     de="Radiationexposuremonitoring"/>
+        <translation class="Langintervention" en="Intervention" fr="Intervention" nl="Intervention" de="Intervention"/>
+        <translation class="Langmedicationschemeelement" en="Medicationschemeelement" fr="Medicationschemeelement"
+                     nl="Medicationschemeelement" de="Medicationschemeelement"/>
+        <translation class="Langtreatmentsuspension" en="Treatmentsuspension" fr="Treatmentsuspension"
+                     nl="Treatmentsuspension" de="Treatmentsuspension"/>
+        <translation class="Langencountertype" en="encounter type"/>
+        <translation class="Langencounterresponsible" en="responsible physician for the encounter"/>
+        <translation class="Langencounternumber" en="encounter number"/>
+        <translation class="Langhealthcareelement" en="healthcare element" fr="élément de soins" nl="zorg element"/>
+        <translation class="Langreimbursementcertificate" en="reimbursementcertificate"/>
+        <translation class="Langadmissiontype" en="admission type"/>
+        <translation class="Langreferringtype" en="referring type"/>
+        <translation class="Langexpirationdatetime" en="expiration date and time"/>
+        <translation class="Langrisk" en="risk factor"/>
+        <translation class="Langencounterdatetime" en="encounter date and time"/>
+        <translation class="Langencounterlocation" en="encounter location"/>
+        <translation class="Langencounterlegalservice" en="encounter legal service"/>
+        <translation class="Langtransferdatetime" en="transfer datetime"/>
+        <translation class="Langdischargetype" en="type of discharge"/>
+        <translation class="Langdischargedestination" en="discharge destination"/>
+        <translation class="Langrequesteddischargedestination" en="discharge preferred destination"/>
+        <translation class="Langrequestdatetime" en="request date and time"/>
+        <translation class="Langrequestnumber" en="request number"/>
+        <translation class="Langrequestor" en="requestor / referrer"/>
+        <translation class="Langlab" en="laboratory item"/>
+        <translation class="Langevolution" en="evolution"/>
+        <translation class="Langtranscriptionist" en="transcriptionist"/>
+        <translation class="Langtransactionreason" en="reason for transaction"/>
+        <translation class="Langrequestedencountertype" en="requested encounter type"/>
+        <translation class="Langrequesteddecisionsharing" en="requested decision sharing"/>
+        <translation class="Langconclusion" en="conclusion"/>
+        <translation class="Langhealthissue" en="health issue"/>
+        <translation class="Langhabit" en="habits"/>
+        <translation class="Langallergy" en="allergy"/>
+        <translation class="Langadr" en="adverse drug reaction"/>
+        <translation class="Langcomplaint" en="complaint"/>
+        <translation class="Langclinical" en="clinical examination"/>
+        <translation class="Langtechnical" en="technical examination"/>
+        <translation class="Langmedication" en="medication"/>
+        <translation class="Langcomplementaryproduct" en="complementary product"/>
+        <translation class="Langvaccine" en="vaccine"/>
+        <translation class="Langtreatment" en="treatment"/>
+        <translation class="Langcontactperson" en="contact person"/>
+        <translation class="Langautonomy" en="autonomy level"/>
+        <translation class="Langspecimendatetime" en="specimen date and time"/>
+        <translation class="Langhcpartyavailability" en="availability of an healthcare party"/>
+        <translation class="Langgmdmanager" en="global medical record manager"/>
+        <translation class="Langntbr" en="not to be ressuscitated"/>
+        <translation class="Langbloodtransfusionrefusal" en="blood transfusion refusal"/>
+        <translation class="Langsocialrisk" en="social risk factor"/>
+        <translation class="Langencountersafetyissue" en="safety issues related to the encounter"/>
+        <translation class="Langemergencyevaluation" en="evaluation of emergency justification"/>
+        <translation class="Langincapacity" en="incapacity description"/>
+        <translation class="Langdischargedatetime" en="discharge date and time"/>
+        <translation class="Langinsurancystatus" en="insurancy status"/>
+        <translation class="Langpatientwill" en="patient's will"/>
+        <translation class="Langprofessionalrisk"  en="professional risk"/>
+        <translation class="Langfamilyrisk" en="family risk"/>
+        <translation class="Langparameter" en="parameter"/>
+        <translation class="Langcareplansubscription" en="Care Plan Subscription"/>
+        <translation class="Langdiagnosis" en="Diagnosis"/>
+        <translation class="Langactionplan" en="Action Plan"/>
+        <translation class="Langcontacthcparty" en="Contact Healthcare Party"/>
+        <translation class="Langacts" en="Acts (curatif and prevention)"/>
+        <translation class="Langhealthcareapproach" en="Healthcare Approach"/>
+        <translation class="Langmemberinsurancystatus" en="Member Insurancy Status"/>
+        <translation class="Langreferrer" en="Referrer"/>
+        <translation class="Langrequestedrecipient" en="Requested Recipient"/>
+    </gpmigration>
+
+    <sumehr>
+        <translation class="LangEnglish" en="English" fr="Anglais" nl="Engels" de="Englisch"/>
+        <translation class="LangDutch" en="Dutch" fr="Néerlandais" nl="Nederlands" de="Niederlande"/>
+        <translation class="LangFrench" en="French" fr="Français" nl="Frans" de="Französisch"/>
+        <translation class="LangGerman" en="German" fr="Allemand" nl="Duits" de="Deutsch"/>
+        <translation class="LangSumehrCreationDate" en="Creation date" fr="Date de création" nl="Aanmaakdatum" de="Anfertigungsdatum"/>
+        <translation class="LangShowWarnings" en="Show Warnings" fr="Montrer les avertissements" nl="De waarschuwingen tonen" de="Die Warnungen anzeigen"/>
+    </sumehr>
+
+    <separators>
+        <translation class="LangSeparatorAuthor" en="Author" fr=" Auteur" nl=" Auteur" de="Autor"/>
+        <translation class="LangSeparatorPatient" en="Patient" fr=" Patient" nl=" Patiënt" de="Patient"/>
+        <translation class="LangSeparatorRisks" en="Risks" fr=" Risques" nl=" Risico's" de="Risiko"/>
+        <translation class="LangSeparatorSocialRisks" en="Social risks" fr="Risque sociaux" nl="Sociale risico's"
+                     de="Sozialrisiken"/>
+        <translation class="LangSeparatorAdverseDrugReactions" en="Adverse drug reactions" fr="Effets indésirables"
+                     nl="Neveneffecten" de="Nebenwirkungen"/>
+        <translation class="LangSeparatorAllergies" en="Allergies" fr="Allergies" nl="Allergieën" de="Allergien"/>
+        <translation class="LangSeparatorFamilyRisk" en="FamilyRisk" fr="FamilyRisk" nl="FamilyRisk" de="FamilyRisk"/>
+        <translation class="LangSeparatorProfessionalRisks" en="ProfessionalRisks" fr="ProfessionalRisks"
+                     nl="ProfessionalRisks" de="ProfessionalRisks"/>
+        <translation class="LangSeparatorHealthIssue" en="HealthIssue" fr="HealthIssue" nl="HealthIssue"
+                     de="HealthIssue"/>
+        <translation class="LangSeparatorTreatment" en="Treatment" fr="Treatment" nl="Treatment" de="Treatment"/>
+        <translation class="LangSeparatorHabits" en="Habits" fr="Habits" nl="Habits" de="Habits"/>
+        <translation class="LangSeparatorComplaint" en="Complaint" fr="Complaint" nl="Complaint" de="Complaint"/>
+        <translation class="LangSeparatorClinical" en="Clinical" fr="Clinical" nl="Clinical" de="Clinical"/>
+        <translation class="LangSeparatorTechnical" en="Technical" fr="Technical" nl="Technical" de="Technical"/>
+        <translation class="LangSeparatorRiskFactor" en="RiskFactor" fr="RiskFactor" nl="RiskFactor" de="RiskFactor"/>
+        <translation class="LangSeparatorOtherRisks" en="Other risks" fr="Autres risques" nl="Andere risico's"
+                     de="Andere Risiken"/>
+        <translation class="LangSeparatorCurrentProblems" en="Current problems" fr="Problèmes actuels"
+                     nl="Huidige problemen" de="Heutige Probleme"/>
+        <translation class="LangSeparatorRelevantPassiveCareElement" en="Relevant passive care element"
+                     fr="Eléments de soins passifs pertinents" nl="Relevante passieve zorgelementen"
+                     de="Relevante passive sorgeelemente"/>
+        <translation class="LangSeparatorActiveMedication" en="Active medication" fr="Médication active"
+                     nl="Actieve medicatie" de="Aktive medikation"/>
+        <translation class="LangSeparatorVaccines" en="Vaccines" fr="Vaccins" nl="Vaccins" de="Impfungen"/>
+        <translation class="LangSeparatorContactPersons" en="Contact persons" fr="Personnes de contact"
+                     nl="Contactpersonen" de="Kontaktpersonen"/>
+        <translation class="LangSeparatorPatientWill" en="Patient wills" fr="Volontés du patient"
+                     nl="Wil van de patiënt" de="Patientenwille"/>
+        <translation class="LangSeparatorInsurancyStatus" en="InsurancyStatus" fr="InsurancyStatus" nl="InsurancyStatus"
+                     de="InsurancyStatus"/>
+        <translation class="LangSeparatorGmdManager" en="GMD manager" fr="Dépositaire du DMG" nl="Houder van het GMD"
+                     de="Inhaber des GMD"/>
+        <translation class="LangSeparatorHealthcareProfessionalContacts" en="Healthcare professional contacts"
+                     fr="Contacts - Prestataires de soins" nl="Contact - Zorgverleners" de="Kontakte - Pflegeanbieter"/>
+        <translation class="LangSeparatorClinicalSummaryEnd" en="End of the Clinical Summary"
+                     fr="Fin du format résumé médical" nl="Einde van de GPMigration" de="Ende der GPMigration"/>
+        <translation class="LangSeparatorPreventionPlan" en="PreventionPlan" fr=" PreventionPlan" nl=" PreventionPlan"
+                     de="PreventionPlan"/>
+        <translation class="LangSeparatorCareplanSubscription" en="Careplan Subscription" fr=" Careplan Subscription"
+                     nl=" Careplan Subscription" de="Careplan Subscription"/>
+        <translation class="LangSeparatorAuthor" en="Author" fr=" Auteur" nl=" Auteur" de="Autor"/>
+        <translation class="LangSeparatorPatient" en="Patient" fr=" Patient" nl=" Patiënt" de="Patient"/>
+        <translation class="LangSeparatorRisks" en="Risks" fr=" Risques" nl=" Risico's" de="Risiko"/>
+        <translation class="LangSeparatorSocialRisks" en="Social risks" fr="Risque sociaux" nl="Sociale risico's" de="Sozialrisiken"/>
+        <translation class="LangSeparatorOtherRisks" en="Other risks" fr="Autres risques" nl="Andere risico's" de="Andere Risiken"/>
+        <translation class="LangSeparatorAdverseDrugReactions" en="Adverse drug reactions" fr="Effets indésirables" nl="Neveneffecten" de="Nebenwirkungen"/>
+        <translation class="LangSeparatorAllergies" en="Allergies" fr="Allergies" nl="Allergieën" de="Allergien"/>
+        <translation class="LangSeparatorCurrentProblems" en="Current problems" fr="Problèmes actuels" nl="Huidige problemen" de="Heutige Probleme"/>
+        <translation class="LangSeparatorRelevantPassiveCareElement" en="Relevant passive care element" fr="Eléments de soins passifs pertinents" nl="Relevante passieve zorgelementen" de="Relevante passive sorgeelemente"/>
+        <translation class="LangSeparatorActiveMedication" en="Active medication" fr="Médication active" nl="Actieve medicatie" de="Aktive medikation"/>
+        <translation class="LangSeparatorAdministredVaccines" en="Administrated vaccines" fr="Vaccins administrés" nl="Toegediende vaccins" de="Durchgeführte impfungen"/>
+        <translation class="LangSeparatorContactPersons" en="Contact persons" fr="Personnes de contact" nl="Contactpersonen" de="Kontaktpersonen"/>
+        <translation class="LangSeparatorPatientWill" en="Patient wills" fr="Volontés du patient" nl="Wil van de patiënt" de="Patientenwille"/>
+        <translation class="LangSeparatorGmdManager" en="GMD manager" fr="Dépositaire du DMG" nl="Houder van het GMD" de="Inhaber des GMD"/>
+        <translation class="LangSeparatorHealthcareProfessionalContacts" en="Healthcare professional contacts" fr="Contacts - Prestataires de soins" nl="Contact - Zorgverleners" de="Kontakte - Pflegeanbieter"/>
+        <translation class="LangSeparatorSumehrEnd" en="End of the Sumehr" fr="Fin du Sumehr" nl="Einde van de Sumehr" de="Ende der Sumehr"/>
+    </separators>
+
+    <person>
+        <translation class="LangPersonFirstNames" en="First names" fr="Prénoms" nl="Voornaamen" de="Vornamen"/>
+        <translation class="LangPersonFamilyName" en="Family Name" fr="Nom de Famille" nl="Familienaam"
+                     de="Familienname"/>
+        <translation class="LangPersonBirthdate" en="Birthdate" fr="Date de naissance" nl="Geboortedatum"
+                     de="Geburtsdatum"/>
+        <translation class="LangPersonBirthLocation" en="Birth location" fr="Lieu de naissance" nl="Geboorteplaats"
+                     de="Geburtsort"/>
+        <translation class="LangPersonDeathDate" en="Death date" fr="Date de décès" nl="Datum van overlijden"
+                     de="Sterbedatum"/>
+        <translation class="LangPersonDeathLocation" en="Death location" fr="Lieu de décès" nl="Plaats van overlijden"
+                     de="Sterbeort"/>
+        <translation class="LangPersonUsualLanguage" en="Usual language" fr="Langue maternelle" nl="Moedertaal"
+                     de="Muttersprache"/>
+        <translation class="LangPersonRecordDate" en="Record date" fr="Date d'enregistrement" nl="Registratiedatum"
+                     de="Erfassungsdatum"/>
+        <translation class="LangPersonText" en="Comments" fr="Commentaires" nl="Commentaar" de="Kommentar"/>
+        <translation class="LangTelecom" en="Contact Information" fr="Informations de Contact" nl="Contact Informatie"
+                     de="Kontaktinformationen"/>
+        <translation class="LangPersonProfession" en="Profession" fr="Profession" nl="Profession" de="Profession"/>
+    </person>
+
+    <hcparty>
+        <translation class="LangLangHcpartyName" en="Name" fr="Nom" nl="Naam" de="Name"/>
+    </hcparty>
+
+    <address>
+        <translation class="LangAddress" en="Address" fr="Adresse" nl="Adres" de="Adresse"/>
+        <translation class="LangAddressPB" en="PB" fr="BP" nl="PB" de="PB"/>
+        <translation class="LangAddressNis" en="nis" fr="nis" nl="nis" de="nis"/>
+        <translation class="LangAddressDistrict" en="district" fr="district" nl="district" de="dreis"/>
+        <translation class="LangAddressText" en="comment" fr="remarque" nl="opmerking" de="bemerkung"/>
+    </address>
+
+    <healthCareElement>
+        <translation class="LangHealthcareElementPeriod" en="Period" fr="Période" nl="Periode" de="Periode"/>
+        <translation class="LangHealthcareElementBeginMoment" en="start: " fr="début: " nl="begin: " de="anfang:"/>
+        <translation class="LangHealthcareElementEndMoment" en="end: " fr="fin: " nl="einde: " de="ende:"/>
+        <translation class="LangHealthcareLifeCycle" en="Lifecycle" fr="Cycle de vie" nl="Levenscyclus"
+                     de="Lebenszyklus"/>
+    </healthCareElement>
+
+    <medication>
+        <translation class="LangMedicationIntendedName" en="Name" fr="Nom" nl="Naam" de="Name"/>
+        <translation class="LangMedicationDeliveredName" en="Delivered name" fr="Nom du produit délivré"
+                     nl="Naam van het geleverde product" de="Name des gelieferten produkts"/>
+        <translation class="LangMedicationDeliveredCode" en="Delivered code" fr="Code du produit délivré"
+                     nl="Code van het geleverde product" de="Code des gelieferten produkts"/>
+        <translation class="LangMedicationPeriod" en="Period" fr="Période" nl="Periode" de="Periode"/>
+        <translation class="LangMedicationBeginMoment" en="start: " fr="début: " nl="begin: " de="anfang:"/>
+        <translation class="LangMedicationEndMoment" en="end: " fr="fin: " nl="einde: " de="ende:"/>
+        <translation class="LangMedicationUnspecifiedTextualContent" en="Textual content not specified"
+                     fr="Contenu textuel non spécifié" nl="Textuele inhoud niet gespecificeerd"
+                     de="Textinhalt nicht spezifiziert"/>
+        <translation class="LangMedicationEndMoment" en="end: " fr="fin: " nl="einde: " de="ende:"/>
+        <translation class="LangMedicationLifeCycle" en="Lifecycle" fr="Cycle de vie" nl="Levenscyclus"
+                     de="Lebenszyklus"/>
+        <translation class="LangMedicationFrequency" en="Frequency" fr="Fréquence" nl="Frequentie" de="Frequenz"/>
+        <translation class="LangMedicationPosology" en="Posology" fr="Posologie" nl="Dosering" de="Dosierung"/>
+        <translation class="LangMedicationInstruction" en="Instruction for patient" fr="Instruction pour le patient"
+                     nl="Instructie voor de patiënt" de="Unterricht für den Patienten"/>
+        <translation class="LangMedicationDayperiod" en="Dayperiod" fr="Période de jour" nl="Dagen" de="Tageszeit"/>
+        <translation class="LangMedicationDuration" en="Duration" fr="Durée" nl="Duur" de="Dauer"/>
+        <translation class="LangMedicationTemporality" en="Temporality" fr="Temporalité" nl="Tijdelijkheid"
+                     de="Zeitlichkeit"/>
+        <translation class="LangMedicationQuantity" en="Quantity" fr="Quantité" nl="hoeveelheid" de="Menge"/>
+        <translation class="LangMedicationDeliverydate" en="Delivery date" fr="Date de livraison" nl="Leveringsdatum"
+                     de="Liefertermin"/>
+        <translation class="LangMedicationRoute" en="Route" fr="Voie" nl="Gebruik" de="Verwendung"/>
+        <translation class="LangMedicationInstructionforoverdosing" en="Instruction for overdosing"
+                     fr="Instruction pour le surdosage" nl="Instructie voor overdosering"
+                     de="Anleitung für eine Überdosierung"/>
+        <translation class="LangMedicationInstructionforreimbursement" en="Instruction for reimbursement"
+                     fr="Instruction pour le remboursement" nl="Instructie voor Vergoeding"
+                     de="Anleitung zur Erstattung"/>
+        <translation class="LangMedicationIssubstitutionallowed" en="Substitution is allowed"
+                     fr="La substitution est autorisée" nl="Substitutie is toegestaan" de="Substitution ist erlaubt"/>
+        <translation class="LangMedicationRegimen" en="Renewal" fr="Renouvellement" nl="Regime" de="Regimen"/>
+        <translation class="LangMedicationRenewal" en="Regimen" fr="Régime" nl="Verlenging" de="Erneuerung"/>
+    </medication>
+
+    <vaccine>
+        <translation class="LangVaccineBeginMoment" en="Administration date" fr="Date d'administration"
+                     nl="Datum van toediening" de="Eingabedatum"/>
+        <translation class="LangVaccineUnspecifiedIndication" en="Unspecified indication" fr="Indication non spécifiée"
+                     nl="Indicatie niet gespecificeerd" de="Indikation nicht spezifiziert"/>
+        <translation class="LangBatch" en="Batch" fr=" Batch" nl="Batch" de="Batch"/>
+    </vaccine>
+
+    <patientwill>
+        <translation class="LangBoolean" en="Boolean" fr="Boolean" nl="Boolean" de="Boolean"/>
+    </patientwill>
+
+    <insurancystatus>
+        <translation class="LangMedicalInsurancyStatus" en="Medical Insurancy Status" fr="Medical Insurancy Status"
+                     nl="Medical Insurancy Status" de="Medical Insurancy Status"/>
+        <translation class="LangMembership" en="Membership" fr="Membership" nl="Membership" de="Membership"/>
+        <translation class="LangSiscard" en="Siscard" fr="Siscard" nl="Siscard" de="Siscard"/>
+        <translation class="LangBeginDate" en="Begin date" fr="Begin date" nl="Begin date" de="Begin date"/>
+        <translation class="LangEndDate" en="End date" fr="End date" nl="End date" de="End date"/>
+    </insurancystatus>
+
+    <labresult>
+        <translation class="LangRecorddate" en="Record date" fr="Date d'enregistrement" nl="Registratiedatum"
+                     de="Erfassungsdatum"/>
+        <translation class="LangRecordtime" en="Record time" fr="Heure d'enregistrement" nl="Record time"
+                     de="Record time"/>
+        <translation class="LangUnit" en="Unit" fr="Unit" nl="Unit" de="Unit"/>
+        <translation class="LangMinRef" en="MinRef" fr="MinRef" nl="MinRef" de="MinRef"/>
+        <translation class="LangMaxRef" en="MaxRef" fr="MaxRef" nl="MaxRef" de="MaxRef"/>
+        <translation class="LangRefscope" en="Refscope" fr="Refscope" nl="Refscope" de="Refscope"/>
+        <translation class="LangSeverity" en="Severity" fr="Severity" nl="Severity" de="Severity"/>
+        <translation class="LangSite" en="Site" fr="Site" nl="Site" de="Site"/>
+    </labresult>
+
+    <id>
+        <translation class="LangINSS" en="INSS No" fr="NISS" nl="INSZ" de="INSS"/>
+        <translation class="LangID-PATIENT" en="INSS No" fr="NISS" nl="INSZ" de="INSS"/>
+        <translation class="LangID-HCPARTY" en="NIHII No" fr="INAMI" nl="RIZIV" de="LIKIV"/>
+    </id>
+
+    <cd>
+        <translation class="LangCD-HCPARTY" en="Role" fr="Rôle" nl="Rol" de="Rolle"/>
+        <translation class="LangCD-TELECOMphone" en="Phone" fr="Téléphone" nl="Telefoon" de="Telefon"/>
+        <translation class="LangCD-COUNTRY" en="Nationality" fr="Nationnalité" nl="Nationaliteit" de="Nationalität"/>
+        <translation class="LangCD-SEX" en="Sex" fr="Sexe" nl="Geslacht" de="Geschlecht"/>
+        <translation class="LangCD-CONTACT-PERSON" en="Family Tie" fr="Lien de parenté" nl="Gezinsrelatie"
+                     de="Familienverhältnis"/>
+        <translation class="LangCD-PATIENTWILL" en="Patient will" fr="Volonté du patient" nl="Wil van de patiënt"
+                     de="Patientenwille"/>
+    </cd>
+
+    <lnk>
+        <translation class="LangLnk" en="Link" fr="Link" nl="Link" de="Link"/>
+        <translation class="LangLnk-Type" en="Type: " fr="Type: " nl="Type: " de="Type: "/>
+        <translation class="LangLnk-MediaType" en="Media Type: " fr="Media Type: " nl="Media Type: "
+                     de="Media Type: "/>
+        <translation class="LangLnk-Url" en="Url: " fr="Url: " nl="Url: " de="Url: "/>
+        <translation class="LangLnk-Size" en="Size: " fr="Size: " nl="Size: " de="Size: "/>
+    </lnk>
+
+    <otherItems>
+        <translation class="LangOtherItemsUnexpected" en="Unexpected item elements..."
+                     fr="Elements items non attendus..." nl="Onverwachte items..." de="Unerwartete themen"/>
+        <translation class="LangGenericBeginMoment" en="Start date" fr="Date de début" nl="Begindatum"
+                     de="Anfangsdatum"/>
+        <translation class="LangGenericEndMoment" en="End date" fr="Date de fin" nl="Einddatum" de="Enddatum"/>
+        <translation class="LangText" en="Text" fr="Texte" nl="Tekst" de="Text"/>
+        <translation class="LangRecorddatetime" en="Record date" fr="Date d'enregistrement" nl="Registratiedatum"
+                     de="Erfassungsdatum"/>
+    </otherItems>
+
+    <messages>
+        <translation class="LangMessageReportNotFound" en="XML validation report file not found. "
+                     fr="Le rapport XML de validation n'a pas pu être retrouvé."
+                     nl="Het XML validatierapport werd niet gevonden."
+                     de="Der XML-Validationbericht wurde nicht gefunden."/>
+        <translation class="LangMessageVisualizationIncomplete" en="Visualization may be incomplete or incorrect."
+                     fr="La visualisation peut être incomplète ou incorrecte."
+                     nl="De visualisatie is niet juist of niet volledig."
+                     de="Die Visualisation ist nicht richtig oder vollständig."/>
+        <translation class="LangMessageErrorsNotReported" en="No error or warning will be reported."
+                     fr="Aucune erreur et aucun avertissement ne seront affichés."
+                     nl="Er zullen geen fouten of waarschuwingen worden getoond."
+                     de="Es werden keine Fehler oder Warnungen angezeigt."/>
+        <translation class="LangMessageSumehrNotCorrect" en="THIS GPMIGRATION FORMAT IS NOT CORRECT"
+                     fr="CE FORMAT GPMIGRATION N'EST PAS CORRECT" nl="DEZE GPMIGRATION FORMAT IS NIET CORRECT"
+                     de="DIESER GPMIGRATION FORMAT IST NICHT RICHTIG."/>
+        <translation class="LangMessageSumehrWithWarnings" en="WITH WARNINGS" fr="AVEC AVERTISSEMENTS"
+                     nl="MET WAARSCHUWINGEN" de="MIT WARNUNGEN"/>
+        <translation class="LangErrors" en="Errors" fr="Erreurs" nl="Fouten" de="Fehler"/>
+        <translation class="LangWarnings" en="Warnings" fr="Avertissements" nl="Waarschuwingen" de="Warnungen"/>
+        <translation class="LangMessageSumehrCannotBeDisplayed"
+                     en="This GPMigration format cannot be displayed. See errors below."
+                     fr="Ce format GPMigration ne peut pas être affiché. Voir les erreurs ci-dessous."
+                     nl="Deze GPMigration format kan niet worden getoond. Zie fouten hierna."
+                     de="Dieser GPMigration format kann nicht angezeigt werden. Fehler, siehe nachstehend."/>
+    </messages>
+</gpmigrationVisualizationTranslation>
