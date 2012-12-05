@@ -2879,10 +2879,27 @@
     <!-- Display the text-with layout-->
     <xsl:template match="kmehr:text-with-layout">
         <div class="TextWithLayout">
-            <xsl:copy-of select="*"/>
+            <xsl:apply-templates select="node()" mode="strip-ns"/>
         </div>
     </xsl:template>
 
+    <!-- identity template with a twist: remove the body and strip the namespaces -->
+    <xsl:template match="node()[local-name()='body']" mode="strip-ns">
+        <xsl:apply-templates select="node()" mode="strip-ns"/>
+    </xsl:template>
+    <xsl:template match="@*" mode="strip-ns">
+        <xsl:copy/>
+    </xsl:template>
+    <xsl:template match="*" mode="strip-ns">
+        <xsl:element name="{local-name()}">
+            <xsl:apply-templates select="@*|node()" mode="strip-ns"/>
+        </xsl:element>
+    </xsl:template>
+    <xsl:template match="comment()" mode="strip-ns">
+        <xsl:copy>
+            <xsl:apply-templates select="@*|node()" mode="strip-ns"/>
+        </xsl:copy>
+    </xsl:template>
 
     <!-- Display the date -->
     <xsl:template match="kmehr:date">
