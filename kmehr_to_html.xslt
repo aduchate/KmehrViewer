@@ -5,13 +5,10 @@
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
                 xsi:schemaLocation="http://www.ehealth.fgov.be/standards/kmehr/schema/v1 http://www.icure.eu/schema/1.4/ehealth-kmehr/XSD/kmehr_elements-1_4.xsd">
     <xsl:param name="annexdirectory"/>
-    <xsl:param name="xmlreport"/>
     <xsl:param name="translationdictionary"/>
     <xsl:param name="language"/>
     <xsl:param name="directory"/>
-    <xsl:variable name="defaultlanguage" select="'english'">
-
-    </xsl:variable>
+    <xsl:variable name="defaultlanguage" select="'english'"/>
     <xsl:variable name="translationdictionarypath">
         <xsl:call-template name="get-translationdictionary-path"/>
     </xsl:variable>
@@ -549,7 +546,7 @@
                         </span>
                         <span class="dutch">XML translation dictionary file not found. (</span>
                         <span class="german">XML translation dictionary file not found. (</span>
-                        <xsl:value-of select="$translationdictionarypath"/>
+                        Path: <xsl:value-of select="$translationdictionarypath"/>, Directory: <xsl:value-of select="$annexdirectory"/>
                         <span class="english">) Vizualisation is not complete.</span>
                         <span class="french">) La visualisation est incomplète.</span>
                         <span class="dutch">) Vizualisation is not complete.</span>
@@ -1771,22 +1768,22 @@
                         </tr>
                     </xsl:if>
                 </xsl:when>
- 					<xsl:when test="name() = 'lifecycle'">
-							<xsl:if test="not(../kmehr:cd[@S='CD-ITEM']='medication' or ../kmehr:cd[@S='CD-ITEM']='healthcareelement' )">
-								<tr style="display:none">
-									<th>LifeCycle</th>
-									<td>
-										<xsl:value-of select="kmehr:cd"/>
-									</td>
-								</tr>
-							</xsl:if>
-						</xsl:when>
-						<xsl:otherwise>
-							<tr style="display:none">
-								<th><xsl:value-of select="name()"/></th>
-								<td colspan="2">Unhandled<!--<xsl:value-of select="text()"/>--></td>
-							</tr>
-						</xsl:otherwise>
+                <xsl:when test="name() = 'lifecycle'">
+                    <xsl:if test="not(../kmehr:cd[@S='CD-ITEM']='medication' or ../kmehr:cd[@S='CD-ITEM']='healthcareelement' )">
+                        <tr style="display:none">
+                            <th>LifeCycle</th>
+                            <td>
+                                <xsl:value-of select="kmehr:cd"/>
+                            </td>
+                        </tr>
+                    </xsl:if>
+                </xsl:when>
+                <xsl:otherwise>
+                    <tr style="display:none">
+                        <th><xsl:value-of select="name()"/></th>
+                        <td colspan="2">Unhandled<!--<xsl:value-of select="text()"/>--></td>
+                    </tr>
+                </xsl:otherwise>
             </xsl:choose>
         </xsl:for-each>
     </xsl:template>
