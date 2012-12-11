@@ -3108,7 +3108,7 @@
     <!-- LNK PROCESSING -->
     <xsl:template match="kmehr:lnk">
         <xsl:variable name="destination">
-            <xsl:value-of select="$directory"/>
+            <xsl:value-of select="$annexdirectory"/>
             <xsl:if test="local-name(..)='folder'">
                 <xsl:text>folder</xsl:text>
             </xsl:if>
