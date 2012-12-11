@@ -140,6 +140,63 @@
         <translation class="LangShowWarnings" en="Show Warnings" fr="Montrer les avertissements" nl="De waarschuwingen tonen" de="Die Warnungen anzeigen"/>
     </sumehr>
 
+    <cdparty>
+        <translation class="Langdeptanatomopathology" en="anatomopathology" fr="anatomopathology" nl="anatomopathology" de="anatomopathology"/>
+        <translation class="Langdeptanesthesiology" en="anesthesiology" fr="anesthesiology" nl="anesthesiology" de="anesthesiology"/>
+        <translation class="Langdeptbacteriology" en="bacteriology" fr="bacteriology" nl="bacteriology" de="bacteriology"/>
+        <translation class="Langdeptcardiology" en="cardiology" fr="cardiology" nl="cardiology" de="cardiology"/>
+        <translation class="Langdeptdermatology" en="dermatology" fr="dermatology" nl="dermatology" de="dermatology"/>
+        <translation class="Langdeptdietetics" en="dietetics" fr="dietetics" nl="dietetics" de="dietetics"/>
+        <translation class="Langdeptemergency" en="emergency" fr="emergency" nl="emergency" de="emergency"/>
+        <translation class="Langdeptgastroenterology" en="gastroenterology" fr="gastroenterology" nl="gastroenterology" de="gastroenterology"/>
+        <translation class="Langdeptgeneralpractice" en="general practice" fr="general practice" nl="general practice" de="general practice"/>
+        <translation class="Langdeptgenetics" en="genetics" fr="genetics" nl="genetics" de="genetics"/>
+        <translation class="Langdeptgeriatry" en="geriatry" fr="geriatry" nl="geriatry" de="geriatry"/>
+        <translation class="Langdeptgynecology" en="gynecology" fr="gynecology" nl="gynecology" de="gynecology"/>
+        <translation class="Langdepthematology" en="hematology" fr="hematology" nl="hematology" de="hematology"/>
+        <translation class="Langdeptintensivecare" en="intensive care" fr="intensive care" nl="intensive care" de="intensive care"/>
+        <translation class="Langdeptkinesitherapy" en="kinesitherapy" fr="kinesitherapy" nl="kinesitherapy" de="kinesitherapy"/>
+        <translation class="Langdeptlaboratory" en="laboratory" fr="laboratory" nl="laboratory" de="laboratory"/>
+        <translation class="Langdeptmedicine" en="medicine" fr="medicine" nl="medicine" de="medicine"/>
+        <translation class="Langdeptmolecularbiology" en="molecular biology" fr="molecular biology" nl="molecular biology" de="molecular biology"/>
+        <translation class="Langdeptneonatalogy" en="neonatalogy" fr="neonatalogy" nl="neonatalogy" de="neonatalogy"/>
+        <translation class="Langdeptnephrology" en="nephrology" fr="nephrology" nl="nephrology" de="nephrology"/>
+        <translation class="Langdeptneurology" en="neurology" fr="neurology" nl="neurology" de="neurology"/>
+        <translation class="Langdeptnte" en="nose-throat-ear" fr="nose-throat-ear" nl="nose-throat-ear" de="nose-throat-ear"/>
+        <translation class="Langdeptnuclear" en="nuclear" fr="nuclear" nl="nuclear" de="nuclear"/>
+        <translation class="Langdeptoncology" en="oncology" fr="oncology" nl="oncology" de="oncology"/>
+        <translation class="Langdeptophtalmology" en="ophtalmology" fr="ophtalmology" nl="ophtalmology" de="ophtalmology"/>
+        <translation class="Langdeptpediatry" en="pediatry" fr="pediatry" nl="pediatry" de="pediatry"/>
+        <translation class="Langdeptpharmacy" en="pharmacy" fr="pharmacy" nl="pharmacy" de="pharmacy"/>
+        <translation class="Langdeptphysiotherapy" en="physiotherapy" fr="physiotherapy" nl="physiotherapy" de="physiotherapy"/>
+        <translation class="Langdeptpneumology" en="pneumology" fr="pneumology" nl="pneumology" de="pneumology"/>
+        <translation class="Langdeptpsychiatry" en="psychiatry" fr="psychiatry" nl="psychiatry" de="psychiatry"/>
+        <translation class="Langdeptradiology" en="radiology" fr="radiology" nl="radiology" de="radiology"/>
+        <translation class="Langdeptradiotherapy" en="radiotherapy" fr="radiotherapy" nl="radiotherapy" de="radiotherapy"/>
+        <translation class="Langdeptrhumatology" en="rhumatology" fr="rhumatology" nl="rhumatology" de="rhumatology"/>
+        <translation class="Langdeptstomatology" en="stomatology" fr="stomatology" nl="stomatology" de="stomatology"/>
+        <translation class="Langdeptsurgery" en="surgery" fr="surgery" nl="surgery" de="surgery"/>
+        <translation class="Langdepttoxicology" en="toxicology" fr="toxicology" nl="toxicology" de="toxicology"/>
+        <translation class="Langdepturology" en="urology" fr="urology" nl="urology" de="urology"/>
+        <translation class="Langorghospital" en="hospital" fr="hospital" nl="hospital" de="hospital"/>
+        <translation class="Langorginsurance" en="insurance" fr="insurance" nl="insurance" de="insurance"/>
+        <translation class="Langorglaboratory" en="laboratory" fr="laboratory" nl="laboratory" de="laboratory"/>
+        <translation class="Langorgpublichealth" en="public health organisation" fr="public health organisation" nl="public health organisation" de="public health organisation"/>
+        <translation class="Langpersbiologist" en="biologist" fr="biologist" nl="biologist" de="biologist"/>
+        <translation class="Langpersdentist" en="dentist" fr="dentist" nl="dentist" de="dentist"/>
+        <translation class="Langpersnurse" en="nurse" fr="nurse" nl="nurse" de="nurse"/>
+        <translation class="Langpersparamedical" en="paramedical" fr="paramedical" nl="paramedical" de="paramedical"/>
+        <translation class="Langperspharmacist" en="pharmacist" fr="pharmacist" nl="pharmacist" de="pharmacist"/>
+        <translation class="Langpersphysician" en="physician" fr="médecin" nl="dokter" de="artzt"/>
+        <translation class="Langperssocialworker" en="social worker" fr="social worker" nl="social worker" de="social worker"/>
+        <translation class="Langperstechnician" en="technician" fr="technician" nl="technician" de="technician"/>
+        <translation class="Langpersadministrative" en="administrative" fr="administrative" nl="administrative" de="administrative"/>
+        <translation class="Langpersmidwife" en="midwife" fr="midwife" nl="midwife" de="midwife"/>
+        <translation class="Langapplication" en="software application" fr="software application" nl="software application" de="software application"/>
+        <translation class="Langdeptorthopedy" en="orthopedy" fr="orthopedy" nl="orthopedy" de="orthopedy"/>
+        <translation class="Langorgpractice" en="practice organisation" fr="practice organisation" nl="practice organisation" de="practice organisation"/>
+    </cdparty>
+
     <separators>
         <translation class="LangSeparatorAuthor" en="Author" fr=" Auteur" nl=" Auteur" de="Autor"/>
         <translation class="LangSeparatorPatient" en="Patient" fr=" Patient" nl=" Patiënt" de="Patient"/>
@@ -186,6 +243,7 @@
                      de="PreventionPlan"/>
         <translation class="LangSeparatorCareplanSubscription" en="Careplan Subscription" fr=" Careplan Subscription"
                      nl=" Careplan Subscription" de="Careplan Subscription"/>
+        <translation class="LangSeparatorSender" en="Sender" fr=" Emetteur" nl="Verstuurder" de="Verzender"/>
         <translation class="LangSeparatorAuthor" en="Author" fr=" Auteur" nl=" Auteur" de="Autor"/>
         <translation class="LangSeparatorPatient" en="Patient" fr=" Patient" nl=" Patiënt" de="Patient"/>
         <translation class="LangSeparatorRisks" en="Risks" fr=" Risques" nl=" Risico's" de="Risiko"/>

@@ -142,6 +142,9 @@
                 border: 1px solid Ivory;
                 }
 
+                .Link {
+                margin-top:.8em
+                }
             </style>
             <!-- 1 -->
             <style>
@@ -546,7 +549,8 @@
                         </span>
                         <span class="dutch">XML translation dictionary file not found. (</span>
                         <span class="german">XML translation dictionary file not found. (</span>
-                        Path: <xsl:value-of select="$translationdictionarypath"/>, Directory: <xsl:value-of select="$annexdirectory"/>
+                        Path: <xsl:value-of select="$translationdictionarypath"/>, Directory:
+                        <xsl:value-of select="$annexdirectory"/>
                         <span class="english">) Vizualisation is not complete.</span>
                         <span class="french">) La visualisation est incomplète.</span>
                         <span class="dutch">) Vizualisation is not complete.</span>
@@ -589,6 +593,15 @@
             <xsl:value-of select="kmehr:time"/>
             <br/>
         </div>
+        <div class="separator">
+            <h4 class="clickable" onclick="toggleRow('sender')">
+                <small id="senderCross">[+]</small>
+                <span class="LangSeparatorSender"/>
+            </h4>
+        </div>
+        <table id="sender">
+            <xsl:apply-templates select="kmehr:sender/kmehr:hcparty"/>
+        </table>
     </xsl:template>
 
     <!-- Kmehr FOLDER processing -->
@@ -604,8 +617,7 @@
         <table id="patient">
             <xsl:apply-templates select="kmehr:patient"/>
         </table>
-
-        <xsl:apply-templates select="kmehr:transaction"/>
+        <xsl:apply-templates select="kmehr:transaction|kmehr:lnk"/>
     </xsl:template>
 
     <!-- CLINICAL SUMMARY PROCESSING -->
@@ -1154,6 +1166,57 @@
 
     <!-- SUMEHR PROCESSING -->
     <xsl:template match="kmehr:transaction[kmehr:cd[@S='CD-TRANSACTION' and .='sumehr']]">
+        <div class="separator">
+            <h4>
+                <span>
+                    <xsl:attribute name="class">
+                        <xsl:value-of select="concat('Lang',kmehr:cd[@S='CD-TRANSACTION'])"/>
+                    </xsl:attribute>
+                </span>
+                <span>
+                    <xsl:text> </xsl:text>
+                    <xsl:value-of select="kmehr:id[@S='LOCAL']"/>
+                    <xsl:text>, </xsl:text>
+                </span>
+                <span>
+                    <xsl:for-each select="kmehr:author/kmehr:hcparty">
+                        <xsl:if test="position()>1">,</xsl:if>
+                        <xsl:choose>
+                            <xsl:when test="string-length(normalize-space(kmehr:familyname))>0">
+                                <xsl:value-of select="kmehr:firstname"/><xsl:text> </xsl:text>
+                                <xsl:value-of select="kmehr:familyname"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:if test="string-length(normalize-space(kmehr:name))>0">
+                                    <xsl:value-of select="kmehr:name"/>
+                                </xsl:if>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                        <xsl:if test="kmehr:cd[@S='CD-HCPARTY']">
+                            <span>[</span>
+                            <span>
+                                <xsl:attribute name="class">
+                                    <xsl:value-of select="concat('Lang',kmehr:cd[@S='CD-HCPARTY'])"/>
+                                </xsl:attribute>
+                            </span>
+                            <span>]</span>
+                        </xsl:if>
+                    </xsl:for-each>
+                </span>
+                <xsl:call-template name="clean-date">
+                    <xsl:with-param name="date">
+                        <xsl:value-of select="kmehr:date"/>
+                    </xsl:with-param>
+                </xsl:call-template>
+                <xsl:text> </xsl:text>
+                <xsl:call-template name="clean-time">
+                    <xsl:with-param name="time">
+                        <xsl:value-of select="kmehr:time"/>
+                    </xsl:with-param>
+                </xsl:call-template>
+            </h4>
+        </div>
+
         <xsl:for-each select="kmehr:item">
             <xsl:sort select="kmehr:cd[@S='CD-ITEM']"/>
         </xsl:for-each>
@@ -1166,40 +1229,44 @@
                     <span style="color:#9B1C27">
                         <h4 onclick="toggleRow('risks')">
                             <small id="risksCross">[+]</small>
-                            Risks
+                            <span class="LangSeparatorRisks"/>
                         </h4>
                     </span>
                 </div>
                 <span style="color:#9B1C27; cursor:pointer; margin-left:0.3em">
-                    <b onclick="toggleRow('risks')">Allergies</b>
+                    <b onclick="toggleRow('risks')"><span class="LangSeparatorAllergies"/></b>
                 </span>
                 <table style="margin-bottom:3pt">
                     <tbody id="risks">
-                        <xsl:apply-templates select="//kmehr:item[kmehr:cd[@S='CD-ITEM']='allergy']" mode="sumehr"/>
+                        <xsl:apply-templates select="//kmehr:item[kmehr:cd[@S='CD-ITEM']='allergy']"
+                                             mode="sumehr"/>
                     </tbody>
                 </table>
                 <span style="color:#9B1C27; cursor:pointer; margin-left:0.3em">
-                    <b onclick="toggleRow('risks')">Adverse drug reactions</b>
+                    <b onclick="toggleRow('risks')"><span class="LangSeparatorAdverseDrugReactions"/></b>
                 </span>
                 <table style="margin-bottom:3pt">
                     <tbody id="risks">
-                        <xsl:apply-templates select="//kmehr:item[kmehr:cd[@S='CD-ITEM']='adr']" mode="sumehr"/>
+                        <xsl:apply-templates select="//kmehr:item[kmehr:cd[@S='CD-ITEM']='adr']"
+                                             mode="sumehr"/>
                     </tbody>
                 </table>
                 <span style="color:#9B1C27; cursor:pointer; margin-left:0.3em">
-                    <b align="left" onclick="toggleRow('risks')">Social risks</b>
+                    <b align="left" onclick="toggleRow('risks')"><span class="LangSeparatorSocialRisks"/></b>
                 </span>
                 <table style="margin-bottom:3pt">
                     <tbody id="risks">
-                        <xsl:apply-templates select="//kmehr:item[kmehr:cd='socialrisk']" mode="sumehr"/>
+                        <xsl:apply-templates select="//kmehr:item[kmehr:cd='socialrisk']"
+                                             mode="sumehr"/>
                     </tbody>
                 </table>
                 <span style="color:#9B1C27; cursor:pointer; margin-left:0.3em">
-                    <b onclick="toggleRow('risks')">Other risks</b>
+                    <b onclick="toggleRow('risks')"><span class="LangSeparatorOtherRisks"/></b>
                 </span>
                 <table style="margin-bottom:3pt">
                     <tbody id="risks">
-                        <xsl:apply-templates select="//kmehr:item[kmehr:cd[@S='CD-ITEM']='risk']" mode="sumehr"/>
+                        <xsl:apply-templates select="//kmehr:item[kmehr:cd[@S='CD-ITEM']='risk']"
+                                             mode="sumehr"/>
                     </tbody>
                 </table>
             </xsl:when>
@@ -1208,40 +1275,44 @@
                     <span style="color:#9B1C27">
                         <h4>
                             <small id="risksCross"/>
-                            Risks
+                        <span class="LangSeparatorRisks"/>
                         </h4>
                     </span>
                 </div>
                 <span style="color:#9B1C27; margin-left:0.3em">
-                    <b>Allergies</b>
+                    <b><span class="LangSeparatorAllergies"/>></b>
                 </span>
                 <table style="margin-bottom:3pt">
                     <tbody id="risks">
-                        <xsl:apply-templates select="//kmehr:item[kmehr:cd[@S='CD-ITEM']='allergy']" mode="sumehr"/>
+                        <xsl:apply-templates select="//kmehr:item[kmehr:cd[@S='CD-ITEM']='allergy']"
+                                             mode="sumehr"/>
                     </tbody>
                 </table>
                 <span style="color:#9B1C27; margin-left:0.3em">
-                    <b>Adverse drug reactions</b>
+                    <b><span class="LangSeparatorAdverseDrugReactions"/></b>
                 </span>
                 <table style="margin-bottom:3pt">
                     <tbody id="risks">
-                        <xsl:apply-templates select="//kmehr:item[kmehr:cd[@S='CD-ITEM']='adr']" mode="sumehr"/>
+                        <xsl:apply-templates select="//kmehr:item[kmehr:cd[@S='CD-ITEM']='adr']"
+                                             mode="sumehr"/>
                     </tbody>
                 </table>
                 <span style="color:#9B1C27; margin-left:0.3em">
-                    <b>Social risks</b>
+                    <b><span class="LangSeparatorSocialRisks"/></b>
                 </span>
                 <table style="margin-bottom:3pt">
                     <tbody id="risks">
-                        <xsl:apply-templates select="//kmehr:item[kmehr:cd='socialrisk']" mode="sumehr"/>
+                        <xsl:apply-templates select="//kmehr:item[kmehr:cd='socialrisk']"
+                                             mode="sumehr"/>
                     </tbody>
                 </table>
                 <span style="color:#9B1C27; margin-left:0.3em">
-                    <b>Other risks</b>
+                    <b><span class="LangSeparatorOtherRisks"/></b>
                 </span>
                 <table style="margin-bottom:3pt">
                     <tbody id="risks">
-                        <xsl:apply-templates select="//kmehr:item[kmehr:cd[@S='CD-ITEM']='risk']" mode="sumehr"/>
+                        <xsl:apply-templates select="//kmehr:item[kmehr:cd[@S='CD-ITEM']='risk']"
+                                             mode="sumehr"/>
                     </tbody>
                 </table>
             </xsl:otherwise>
@@ -1253,7 +1324,7 @@
                     <span style="color:#9B1C27">
                         <h4 onclick="toggleRow('currentproblems')">
                             <small id="currentproblemsCross">[+]</small>
-                            Current Problems
+                    <span class="LangSeparatorCurrentProblems"/>
                         </h4>
                     </span>
                 </div>
@@ -1263,7 +1334,7 @@
                     <span style="color:#9B1C27">
                         <h4>
                             <small id="currentproblemsCross"/>
-                            Current Problems
+                            <span class="LangSeparatorCurrentProblems"/>
                         </h4>
                     </span>
                 </div>
@@ -1312,7 +1383,7 @@
                     <span style="color:#9B1C27">
                         <h4 onclick="toggleRow('medication')">
                             <small id="medicationCross">[+]</small>
-                            Active medication
+                            <span class="LangSeparatorActiveMedication"/>
                         </h4>
                     </span>
                 </div>
@@ -1322,7 +1393,7 @@
                     <span style="color:#9B1C27">
                         <h4>
                             <small id="medicationCross"/>
-                            Active medication
+                            <span class="LangSeparatorActiveMedication"/>
                         </h4>
                     </span>
                 </div>
@@ -1330,7 +1401,8 @@
         </xsl:choose>
         <table>
             <tbody id="medication">
-                <xsl:apply-templates select="//kmehr:item[kmehr:cd[@S='CD-ITEM']='medication']" mode="sumehr"/>
+                <xsl:apply-templates select="//kmehr:item[kmehr:cd[@S='CD-ITEM']='medication']"
+                                     mode="sumehr"/>
             </tbody>
         </table>
         <xsl:choose>
@@ -1339,7 +1411,7 @@
                     <span style="color:#9B1C27">
                         <h4 onclick="toggleRow('vaccine')">
                             <small id="vaccineCross">[+]</small>
-                            Administered vaccines
+                            <span class="LangSeparatorAdministredVaccines"/>
                         </h4>
                     </span>
                 </div>
@@ -1349,7 +1421,7 @@
                     <span style="color:#9B1C27">
                         <h4>
                             <small id="vaccineCross"/>
-                            Administered vaccines
+                            <span class="LangSeparatorAdministredVaccines"/>
                         </h4>
                     </span>
                 </div>
@@ -1357,7 +1429,8 @@
         </xsl:choose>
         <table>
             <tbody id="vaccine">
-                <xsl:apply-templates select="//kmehr:item[kmehr:cd[@S='CD-ITEM']='vaccine']" mode="sumehr"/>
+                <xsl:apply-templates select="//kmehr:item[kmehr:cd[@S='CD-ITEM']='vaccine']"
+                                     mode="sumehr"/>
             </tbody>
         </table>
         <xsl:choose>
@@ -1366,7 +1439,7 @@
                     <span style="color:#9B1C27">
                         <h4 onclick="toggleRow('contactperson')">
                             <small id="contactpersonCross">[+]</small>
-                            Contact Persons
+                            <span class="LangSeparatorContactPersons"/>
                         </h4>
                     </span>
                 </div>
@@ -1376,7 +1449,7 @@
                     <span style="color:#9B1C27">
                         <h4>
                             <small id="contactpersonCross"/>
-                            Contact Persons
+                            <span class="LangSeparatorContactPersons"/>
                         </h4>
                     </span>
                 </div>
@@ -1384,7 +1457,8 @@
         </xsl:choose>
         <table>
             <tbody id="contactperson">
-                <xsl:apply-templates select="//kmehr:item[kmehr:cd[@S='CD-ITEM']='contactperson']" mode="sumehr"/>
+                <xsl:apply-templates select="//kmehr:item[kmehr:cd[@S='CD-ITEM']='contactperson']"
+                                     mode="sumehr"/>
             </tbody>
         </table>
         <xsl:choose>
@@ -1393,7 +1467,7 @@
                     <span style="color:#9B1C27">
                         <h4 onclick="toggleRow('gmdmanager')">
                             <small id="gmdmanagerCross">[+]</small>
-                            GMD Manager
+                            <span class="LangSeparatorGmdManager"/>
                         </h4>
                     </span>
                 </div>
@@ -1403,7 +1477,7 @@
                     <span style="color:#9B1C27">
                         <h4>
                             <small id="gmdmanagerCross"/>
-                            GMD Manager
+                            <span class="LangSeparatorGmdManager"/>
                         </h4>
                     </span>
                 </div>
@@ -1411,7 +1485,8 @@
         </xsl:choose>
         <table>
             <tbody id="gmdmanager">
-                <xsl:apply-templates select="//kmehr:item[kmehr:cd[@S='CD-ITEM']='gmdmanager']" mode="sumehr"/>
+                <xsl:apply-templates select="//kmehr:item[kmehr:cd[@S='CD-ITEM']='gmdmanager']"
+                                     mode="sumehr"/>
             </tbody>
         </table>
         <xsl:choose>
@@ -1438,7 +1513,8 @@
         </xsl:choose>
         <table>
             <tbody id="contacthcparty">
-                <xsl:apply-templates select="//kmehr:item[kmehr:cd[@S='CD-ITEM']='contacthcparty']" mode="sumehr"/>
+                <xsl:apply-templates select="//kmehr:item[kmehr:cd[@S='CD-ITEM']='contacthcparty']"
+                                     mode="sumehr"/>
             </tbody>
         </table>
         <div style="background:#D9E0C9; cursor:pointer">
@@ -1461,8 +1537,6 @@
 				or kmehr:cd='adr')]" mode="sumehr"/>
             </tbody>
         </table>
-
-
     </xsl:template>
 
     <xsl:template match="kmehr:item" mode="sumehr">
@@ -1485,21 +1559,11 @@
 					or kmehr:cd[@S='CD-ITEM']='adr'">
 
                 <xsl:for-each select="kmehr:content/kmehr:text">
-                    <xsl:if test="position()=1">
-                        <tr id="short">
-                            <th colspan="3" align="center">
-                                <!-- no more used <xsl:text>Label : </xsl:text> -->
-                                <xsl:value-of select="."/>
-                            </th>
-                        </tr>
-                    </xsl:if>
-                    <xsl:if test="not(position()=1)">
-                        <tr id="short">
-                            <th colspan="3">
-                                <xsl:text> &amp; </xsl:text><xsl:value-of select="."/>
-                            </th>
-                        </tr>
-                    </xsl:if>
+                    <tr id="short">
+                        <th colspan="3" align="center">
+                            <xsl:value-of select="."/>
+                        </th>
+                    </tr>
                 </xsl:for-each>
 
                 <tr style="display:none">
@@ -1780,7 +1844,9 @@
                 </xsl:when>
                 <xsl:otherwise>
                     <tr style="display:none">
-                        <th><xsl:value-of select="name()"/></th>
+                        <th>
+                            <xsl:value-of select="name()"/>
+                        </th>
                         <td colspan="2">Unhandled<!--<xsl:value-of select="text()"/>--></td>
                     </tr>
                 </xsl:otherwise>
@@ -1792,33 +1858,69 @@
     <xsl:template
             match="kmehr:transaction[kmehr:cd[@S='CD-TRANSACTION' and (.!='clinicalsummary') and (.!='sumehr')]]">
         <div class="TransactionContent">
-            <div class="TransactionContentTitle">
-                <h3>
-                    <small id="resultCross">[+]</small>
+            <div class="separator">
+                <h4 class="clickable" onclick="toggleRow('otherTransaction')">
+                    <small id="otherTransactionCross">[+]</small>
                     &#160;
                     <span>
-                        <xsl:attribute name="class"><xsl:value-of select="concat('Lang',kmehr:cd[@S='CD-TRANSACTION'])"/></xsl:attribute>
+                        <xsl:attribute name="class">
+                            <xsl:value-of select="concat('Lang',kmehr:cd[@S='CD-TRANSACTION'])"/>
+                        </xsl:attribute>
                     </span>
-                    (
-                    <xsl:choose>
-                        <xsl:when test="kmehr:author/kmehr:hcparty/kmehr:familyname">
-                            <xsl:value-of select="kmehr:author/kmehr:hcparty/kmehr:firstname"/><xsl:text> </xsl:text>
-                            <xsl:value-of select="kmehr:author/kmehr:hcparty/kmehr:familyname"/><xsl:text>, </xsl:text>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:if test="kmehr:author/kmehr:hcparty/kmehr:name">
-                                <xsl:value-of select="kmehr:author/kmehr:hcparty/kmehr:name"/><xsl:text>, </xsl:text>
+                    <span>
+                        <xsl:text> </xsl:text>
+                        <xsl:value-of select="kmehr:id[@S='LOCAL']"/>
+                        <xsl:text>, </xsl:text>
+                    </span>
+                    <span>
+                        <xsl:for-each select="kmehr:author/kmehr:hcparty">
+                            <xsl:if test="position()>1">,</xsl:if>
+                            <xsl:choose>
+                                <xsl:when test="string-length(normalize-space(kmehr:familyname))>0">
+                                    <xsl:value-of select="kmehr:firstname"/><xsl:text> </xsl:text>
+                                    <xsl:value-of select="kmehr:familyname"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:if test="string-length(normalize-space(kmehr:name))>0">
+                                        <xsl:value-of select="kmehr:name"/>
+                                    </xsl:if>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                            <xsl:if test="kmehr:cd[@S='CD-HCPARTY']">
+                                <span>[</span>
+                                <span>
+                                    <xsl:attribute name="class">
+                                        <xsl:value-of select="concat('Lang',kmehr:cd[@S='CD-HCPARTY'])"/>
+                                    </xsl:attribute>
+                                </span>
+                                <span>]</span>
                             </xsl:if>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                    <xsl:value-of select="kmehr:date"/><xsl:text> </xsl:text>
-                    <xsl:value-of select="kmehr:time"/> )
-                </h3>
+                        </xsl:for-each>
+                    </span>
+                    <xsl:call-template name="clean-date">
+                        <xsl:with-param name="date">
+                            <xsl:value-of select="kmehr:date"/>
+                        </xsl:with-param>
+                    </xsl:call-template>
+                    <xsl:text> </xsl:text>
+                    <xsl:call-template name="clean-time">
+                        <xsl:with-param name="time">
+                            <xsl:value-of select="kmehr:time"/>
+                        </xsl:with-param>
+                    </xsl:call-template>
+                </h4>
             </div>
-            <xsl:apply-templates select="kmehr:heading|kmehr:item|kmehr:text|kmehr:text-with-layout|kmehr:lnk"/>
+            <table id="otherTransaction">
+                <tbody>
+                    <tr>
+                        <td>
+                            <xsl:apply-templates
+                                    select="kmehr:heading|kmehr:item|kmehr:text|kmehr:text-with-layout|kmehr:lnk"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-
-        <table></table>
     </xsl:template>
 
     <!-- CLINICALSUMMARY ITEM PROCESSING -->
@@ -2755,7 +2857,9 @@
         <div class="ItemContent">
             <h4>
                 <span>
-                    <xsl:attribute name="class"><xsl:value-of select="concat('Lang',./kmehr:cd[@S='CD-ITEM'])"/></xsl:attribute>
+                    <xsl:attribute name="class">
+                        <xsl:value-of select="concat('Lang',./kmehr:cd[@S='CD-ITEM'])"/>
+                    </xsl:attribute>
                 </span>
             </h4>
             <!-- GENERIC ITEM ELEMENTS PROCESS -->
@@ -2873,7 +2977,9 @@
 
     <!-- Display the details of an item content-->
     <xsl:template match="kmehr:content">
+        <table>
         <xsl:apply-templates select="*"/>
+        </table>
     </xsl:template>
 
     <!-- Display the text-with layout-->
@@ -3003,6 +3109,9 @@
     <xsl:template match="kmehr:lnk">
         <xsl:variable name="destination">
             <xsl:value-of select="$directory"/>
+            <xsl:if test="local-name(..)='folder'">
+                <xsl:text>folder</xsl:text>
+            </xsl:if>
             <xsl:if test="../kmehr:cd[@S='CD-TRANSACTION']">
                 <xsl:value-of select="../kmehr:cd[@S='CD-TRANSACTION']"/>
             </xsl:if>
@@ -3040,27 +3149,30 @@
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
+        <div class="Link">
+            <xsl:text>Link: </xsl:text>
         <xsl:if test="@TYPE">
             <b class="LangLnk-Type"/>
             <xsl:value-of select="@TYPE"/>
-            <xsl:text>&#160;</xsl:text>
+            <xsl:text>,&#160;</xsl:text>
         </xsl:if>
         <xsl:if test="@MEDIATYPE">
             <b class="LangLnk-MediaType"/>
             <xsl:value-of select="@MEDIATYPE"/>
-            <xsl:text>&#160;</xsl:text>
+            <xsl:text>,&#160;</xsl:text>
         </xsl:if>
-        <xsl:if test="@URL">
+        <xsl:if test="starts-with(@URL,'http')">
             <b class="LangLnk-Url"/>
             <xsl:value-of select="@URL"/>
-            <xsl:text>&#160;</xsl:text>
+            <xsl:text>,&#160;</xsl:text>
         </xsl:if>
         <xsl:if test="@SIZE">
             <b class="LangLnk-Size"/>
             <xsl:value-of select="@SIZE"/>
-            <xsl:text>&#160;</xsl:text>
+            <xsl:text>,&#160;</xsl:text>
         </xsl:if>
         <a href="{$destination}">Display</a>
+        </div>
     </xsl:template>
 
     <!-- PROCESSING PATIENT-->
@@ -3840,4 +3952,15 @@
         </p>
         <xsl:apply-templates select="kmehr:*"/>
     </xsl:template>
+
+    <xsl:template name="clean-date">
+        <xsl:param name="date"/>
+        <xsl:value-of select="substring-before($date,'+0')"/>
+    </xsl:template>
+
+    <xsl:template name="clean-time">
+        <xsl:param name="time"/>
+        <xsl:value-of select="substring-before($time,'+0')"/>
+    </xsl:template>
+
 </xsl:stylesheet>
