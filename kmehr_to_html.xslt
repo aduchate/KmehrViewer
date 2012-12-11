@@ -1281,7 +1281,7 @@
                     </span>
                 </div>
                 <span style="color:#9B1C27; margin-left:0.3em">
-                    <b><span class="LangSeparatorAllergies"/>></b>
+                    <b><span class="LangSeparatorAllergies"/></b>
                 </span>
                 <table style="margin-bottom:3pt">
                     <tbody id="risks">
