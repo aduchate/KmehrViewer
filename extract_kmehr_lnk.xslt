@@ -4,7 +4,7 @@
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
                 xsi:schemaLocation="http://www.ehealth.fgov.be/standards/kmehr/schema/v1 http://www.icure.eu/schema/1.4/ehealth-kmehr/XSD/kmehr_elements-1_4.xsd">
     <xsl:output indent="yes"/>
-    <xsl:param name="annexdirectory"/>
+    <xsl:param name="lnkdirectory"/>
 
     <xsl:template match="/">
         <annexes>
@@ -14,7 +14,7 @@
 
     <xsl:template match="kmehr:lnk">
         <xsl:variable name="destination">
-            <xsl:value-of select="$annexdirectory"/>
+            <xsl:value-of select="lnkdirectory"/>
             <xsl:if test="local-name(..)='folder'">
                 <xsl:text>folder</xsl:text>
             </xsl:if>
@@ -72,7 +72,7 @@
                 </xsl:attribute>
             </xsl:if>
             <xsl:attribute name="destination"><xsl:value-of select="$destination"/></xsl:attribute>
-            <xsl:value-of select="@URL"/>
+            <xsl:value-of select="text()"/>
         </annex>
     </xsl:template>
 

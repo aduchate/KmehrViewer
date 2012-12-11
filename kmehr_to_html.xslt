@@ -8,6 +8,7 @@
     <xsl:param name="translationdictionary"/>
     <xsl:param name="language"/>
     <xsl:param name="directory"/>
+    <xsl:param name="lnkdirectory"/>
     <xsl:variable name="defaultlanguage" select="'english'"/>
     <xsl:variable name="translationdictionarypath">
         <xsl:call-template name="get-translationdictionary-path"/>
@@ -1644,6 +1645,15 @@
                                 <xsl:value-of select="kmehr:content/kmehr:substanceproduct/kmehr:intendedname"/>
                             </xsl:otherwise>
                         </xsl:choose>
+                        <xsl:if test="kmehr:content/kmehr:text"><xsl:value-of select="kmehr:content/kmehr:text"/></xsl:if>
+                        <xsl:if test="kmehr:content/kmehr:medicinalproduct/kmehr:intendedcd">
+                            <xsl:text> [</xsl:text>
+                        <xsl:for-each select="kmehr:content/kmehr:medicinalproduct/kmehr:intendedcd">
+                            <xsl:if test="position()>1">, </xsl:if>
+                            <xsl:value-of select="@S"/><xsl:text>=</xsl:text><xsl:value-of select="."/>
+                        </xsl:for-each>
+                            <xsl:text>]</xsl:text>
+                        </xsl:if>
                     </th>
                 </tr>
 
@@ -3108,7 +3118,7 @@
     <!-- LNK PROCESSING -->
     <xsl:template match="kmehr:lnk">
         <xsl:variable name="destination">
-            <xsl:value-of select="$annexdirectory"/>
+            <xsl:value-of select="$lnkdirectory"/>
             <xsl:if test="local-name(..)='folder'">
                 <xsl:text>folder</xsl:text>
             </xsl:if>
